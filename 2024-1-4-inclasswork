@@ -1,0 +1,54 @@
+/*
+In-Class Activity 1
+
+Problem 1
+The database schema consists of 4 relations, whose schemas are:
+Product(maker, model, type)
+PC(model, speed, ram, hd, price)
+Laptop(model, speed, ram, hd, screen, price)
+Printer(model, color, type, price) 
+
+The product relation gives the manufacturer, model number and type(PC, Laptop, or printer) of various products.
+We assume for convenience that model numbers are unique over all manufacturers and product types; the
+assumption is not realistic and a real database would include a code for the manufacturer as part of the model
+number. The PC relation gives for each model number that is a PC the speed, RAM, size of hard disk and price.
+The laptop relation is similar, The printer relation records for each printer model whether the printer produces
+color output, the process type and price.
+Write the following declarations:
+a) A suitable schema for relation Product
+b) A suitable schema for relation PC
+c) A suitable schema for relation Printer
+d) An alteration of your printer schema from (c) to delete the attribute color
+e) An alteration to your Lap
+*/
+
+create table product (
+  product_maker varchar(255),
+  product_model varchar(255),
+  product_type vharchar(255)
+);
+
+create table pc (
+  pc_model varchar(255),
+  pc_speed decimal(12,2),
+  pc_ram decimal(12,2),
+  pc_hd decimal(12,2),
+  pc_screen decimal(12, 2),
+  pc_price decimal(12, 2)
+);
+
+create table laptop (
+  laptop_model varchar(255),
+  laptop_speed decimal(12,2),
+  laptop_ram decimal(12,2),
+  laptop_hd decimal(12,2),
+  laptop_screen decimal(12, 2),
+  laptop_price decimal(12,2)
+);
+
+create table printer (
+  printer_model varchar(255),
+  printer_color varchar(255),
+  printer_type varchar(255),
+  printer_price decimal(12,2)
+)
